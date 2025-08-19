@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shailesh Mourya • Portfolio</title>
+    <meta name="description" content="Teacher • MSc CS • Web & Android Developer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+                    boxShadow: {
+                        soft: '0 10px 30px -12px rgba(0,0,0,0.25)'
+                    }
+                }
+            },
+            darkMode: 'class'
+        };
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.65);
+        }
+
+        .dark .glass {
+            background: rgba(17, 24, 39, 0.6);
+        }
+
+        .section {
+            scroll-margin-top: 80px;
+        }
+
+        /* Gradient text */
+        .gtext {
+            background: linear-gradient(90deg, #4f46e5, #06b6d4, #22c55e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50">
+        <div class="glass border-b border-slate-200/50 dark:border-slate-700/50">
+            <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+                <a href="#home" class="font-extrabold tracking-tight text-xl">MS<span class="gtext">.</span></a>
+                <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                    <a href="#about" class="hover:opacity-80">About</a>
+                    <a href="#skills" class="hover:opacity-80">Skills</a>
+                    <a href="#experience" class="hover:opacity-80">Experience</a>
+                    <a href="#projects" class="hover:opacity-80">Projects</a>
+                    <a href="#education" class="hover:opacity-80">Education</a>
+                    <a href="#contact" class="hover:opacity-80">Contact</a>
+                </nav>
+                <div class="flex items-center gap-2">
+                    <button id="themeBtn" aria-label="Toggle theme"
+                        class="p-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-soft transition">
+                        <span id="themeIcon">🌙</span>
+                    </button>
+                    <a id="resumeBtn" href="files/shailesh_mourya.pdf" target="_blank"
+                        class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 shadow-soft text-sm">
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="section">
+        <div class="max-w-6xl mx-auto px-4 pt-16 pb-10 sm:pt-24 sm:pb-16">
+            <div class="grid md:grid-cols-2 items-center gap-10">
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-slate-500">Namaste 👋 I'm</p>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mt-2">Shailesh Mourya</h1>
+                    <p class="mt-4 text-lg text-slate-600 dark:text-slate-300" id="typing"></p>
+                    <p class="mt-4 text-slate-600 dark:text-slate-300">I’m a developer and educator who teaches in
+                        schools and colleges, runs Sadhana Classes, and builds clean websites and Android apps.</p>
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="#projects"
+                            class="px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-semibold">View
+                            Projects</a>
+                        <a href="#contact"
+                            class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700">Contact</a>
+                    </div>
+                    <div class="mt-6 flex items-center gap-4 text-2xl">
+                        <a id="githubLink" class="hover:opacity-80" href="#" target="_blank" aria-label="GitHub">🐙</a>
+                        <a id="linkedinLink" class="hover:opacity-80" href="#" target="_blank"
+                            aria-label="LinkedIn">💼</a>
+                        <a id="twitterLink" class="hover:opacity-80" href="#" target="_blank"
+                            aria-label="X/Twitter">🕊️</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-cyan-500 to-emerald-500 rounded-3xl blur opacity-30">
+                    </div>
+                    <div
+                        class="relative bg-white/70 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 rounded-3xl p-6 md:p-8 shadow-soft">
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-700/50">
+                                <p class="text-slate-500">Role</p>
+                                <p class="font-semibold">Developer • Teacher</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-700/50">
+                                <p class="text-slate-500">Location</p>
+                                <p class="font-semibold">Mumbai, India</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-700/50">
+                                <p class="text-slate-500">Focus</p>
+                                <p class="font-semibold">Web • Android</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-700/50">
+                                <p class="text-slate-500">Availability</p>
+                                <p class="font-semibold">Open to projects</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 text-sm text-slate-600 dark:text-slate-300">"Code that helps teachers & students
+                            every day."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-extrabold">About</h2>
+            <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">I’m a Web Developer who creates responsive,
+                user-friendly websites that work seamlessly across all devices. Passionate about technology, I’m always
+                ready to learn and adapt to the latest web trends and frameworks.</p>
+            <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">Alongside development, I also teach and guide
+                students, sharing practical knowledge in schools, colleges, and at Sadhana Classes. My goal is to
+                combine continuous learning with real-world application, helping both businesses and learners thrive in
+                today’s digital era.</p>
+            <div class="mt-6 grid sm:grid-cols-3 gap-4 text-sm">
+                <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
+                    <p class="text-slate-500">School</p>
+                    <p class="font-semibold">Mathematics</p>
+                </div>
+                <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
+                    <p class="text-slate-500">College</p>
+                    <p class="font-semibold">I.T & CS</p>
+                </div>
+                <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
+                    <p class="text-slate-500">Classes</p>
+                    <p class="font-semibold">Mathematics,I.T & CS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section py-16 bg-white dark:bg-slate-800/40">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-extrabold">Skills</h2>
+            <div id="skillsWrap" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-extrabold">Experience</h2>
+            <ol id="expList" class="relative mt-8 border-s border-slate-200 dark:border-slate-700">
+            </ol>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section py-16 bg-white dark:bg-slate-800/40">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-end justify-between gap-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold">Projects</h2>
+                <a id="githubProjects" href="#" target="_blank" class="text-sm underline">More on GitHub →</a>
+            </div>
+            <div id="projGrid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-extrabold">Education</h2>
+            <div id="eduWrap" class="mt-6 grid md:grid-cols-2 gap-4"></div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section py-16 bg-white dark:bg-slate-800/40">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-extrabold">Contact</h2>
+            <div class="mt-6 grid md:grid-cols-2 gap-8">
+                <div>
+                    <p class="text-slate-600 dark:text-slate-300">Have a project, need a teacher-friendly tool, or want
+                        to collaborate? Let's talk.</p>
+                    <div class="mt-4 space-y-3 text-sm">
+                        <p>📧 <a id="emailLink" href="mailto:shaileshmouryaofficial@gmail.com"
+                                class="underline">shaileshmouryaofficial@gmail.com</a></p>
+                        <p>📱 <a id="phoneLink" href="tel:+919370170329" class="underline">+91 9370170329</a></p>
+                        <p>📍 Mumbai, India</p>
+                    </div>
+                </div>
+                <form id="messageForm" class="p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
+                    <label class="block text-sm">Your Message</label>
+                    <textarea
+                        class="mt-2 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent p-3"
+                        rows="5" placeholder="Hi Shailesh, I want to build ..."></textarea>
+                    <button type="button"
+                        onclick="alert('This demo form is static on GitHub Pages. Use email/phone to contact!')"
+                        class="mt-3 px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 shadow-soft">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10">
+        <div class="max-w-6xl mx-auto px-4 text-sm text-center text-slate-500">
+            <p>© <span id="year"></span> Shailesh Mourya • Built with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- ======= DATA (EDIT HERE) ======= -->
+    <script>
+        const DATA = {
+            name: 'Shailesh Mourya',
+            title: 'Teacher • MSc CS • Web & Android Developer',
+            email: 'shaileshmouryaofficial@gmail.com',
+            phone: '+91 9370170329',
+            location: 'Mumbai, India',
+            resumeUrl: 'shailesh_mourya.pdf', // link to your Google Drive or PDF
+            social: {
+                github: 'https://github.com/shailesh-mourya',
+                linkedin: 'https://www.linkedin.com/in/shailesh-mourya',
+                twitter: 'https://x.com/@ssm-shailesh'
+            },
+            skills: [
+                { group: 'Languages', items: ['Java', 'Python'] },
+                { group: 'Frontend/UI Development', items: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'] },
+                { group: 'Backend & Databases', items: ['MongoDB', 'MySQL'] },
+                { group: 'Tools', items: ['Git & GitHub', 'Android Studio', 'VS Code', 'Canva'] },
+                { group: 'Domains', items: ['Web Development', 'App Development (Android)', 'Education / EdTech'] },
+                { group: 'Soft Skills', items: ['Teaching', 'Communication', 'Time Management'] }
+            ],
+            experience: [
+                {
+                    role: 'IT Lecturer (College)',
+                    org: 'Mahura Bal Vikas High School & JR.College',
+                    period: '_',
+                    desc: 'Teach IT, guide students, create notes & assignments.'
+                },
+                {
+                    role: 'Maths Teacher (School)',
+                    org: 'SMT.Yamuna Pasi High School & JR.College',
+                    period: '_',
+                    desc: 'Teach Mathematics.'
+                },
+                {
+                    role: 'Full-Stack Web & App Developer',
+                    org: 'Freelancer',
+                    period: '_',
+                    desc: '_'
+                }
+            ],
+            projects: [
+                {
+                    name: 'Secondhand (website)',
+                    tag: 'PHP',
+                    desc: 'Online secondhand books purchasing website using php',
+                    links: [
+                        { label: 'Code/Repo', url: 'https://github.com/shailesh-mourya/secondhand' }
+                    ]
+                },
+                {
+                    name: 'TLearner (website)',
+                    tag: 'PHP',
+                    desc: 'Online website to learn and give test.',
+                    links: [
+                        { label: 'Repo', url: 'https://github.com/shailesh-mourya/tlearner' }
+                    ]
+                },
+                {
+                    name: 'SBLOG',
+                    tag: 'ANGULAR • MONGODB',
+                    desc: 'Bloging website for sharing information and knowledge.',
+                    links: [
+                        { label: 'Preview', url: 'https://github.com/shailesh-mourya/sblog' }
+                    ]
+                }
+            ],
+            education: [
+                {
+                    title: 'M.Sc. Computer Science',
+                    org: 'University of Mumbai (CDOE)',
+                    year: '2024',
+                    details: 'Field project: Personal Portfolio Website.'
+                },
+                {
+                    title: 'B.Sc. Computer Science',
+                    org: 'University of Mumbai',
+                    year: '2023',
+                    details: 'Programming fundamentals, DBMS, OS, Networking.'
+                }
+            ]
+        };
+    </script>
+
+    <!-- ======= RENDER SCRIPT ======= -->
+    <script>
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Social & contact links
+        document.getElementById('githubLink').href = DATA.social.github;
+        document.getElementById('linkedinLink').href = DATA.social.linkedin;
+        document.getElementById('twitterLink').href = DATA.social.twitter;
+        document.getElementById('emailLink').href = `mailto:${DATA.email}`;
+        document.getElementById('phoneLink').href = `tel:${DATA.phone.replace(/\s/g, '')}`;
+        document.getElementById('resumeBtn').href = DATA.resumeUrl;
+        document.getElementById('githubProjects').href = DATA.social.github;
+
+        // Skills
+        const skillsWrap = document.getElementById('skillsWrap');
+        DATA.skills.forEach(s => {
+            const card = document.createElement('div');
+            card.className = 'p-4 rounded-2xl border border-slate-200 dark:border-slate-700';
+            card.innerHTML = `<p class="text-slate-500">${s.group}</p><p class="mt-2 font-semibold">${s.items.join(' • ')}</p>`;
+            skillsWrap.appendChild(card);
+        });
+
+        // Experience timeline
+        const expList = document.getElementById('expList');
+        DATA.experience.forEach((e, i) => {
+            const li = document.createElement('li');
+            li.className = 'pl-6 relative py-5';
+            li.innerHTML = `
+        <span class="absolute left-0 top-6 w-3 h-3 rounded-full bg-indigo-500"></span>
+        <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center justify-between gap-4">
+            <p class="font-semibold">${e.role} • <span class="text-slate-500">${e.org}</span></p>
+            <span class="text-xs text-slate-500">${e.period}</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">${e.desc}</p>
+        </div>`;
+            expList.appendChild(li);
+        });
+
+        // Projects
+        const projGrid = document.getElementById('projGrid');
+        DATA.projects.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'rounded-3xl border border-slate-200 dark:border-slate-700 p-5 bg-white/70 dark:bg-slate-800/50 hover:shadow-soft transition';
+            const links = p.links.map(l => `<a class="text-sm underline" href="${l.url}" target="_blank">${l.label} →</a>`).join(' ');
+            card.innerHTML = `
+        <p class="text-xs uppercase tracking-widest text-slate-500">${p.tag}</p>
+        <h3 class="mt-1 font-bold text-lg">${p.name}</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">${p.desc}</p>
+        <div class="mt-4 flex gap-3 flex-wrap">${links}</div>
+      `;
+            projGrid.appendChild(card);
+        });
+
+        // Education
+        const eduWrap = document.getElementById('eduWrap');
+        DATA.education.forEach(ed => {
+            const card = document.createElement('div');
+            card.className = 'p-5 rounded-2xl border border-slate-200 dark:border-slate-700';
+            card.innerHTML = `
+        <p class="text-xs uppercase tracking-widest text-slate-500">${ed.year}</p>
+        <h3 class="mt-1 font-bold">${ed.title}</h3>
+        <p class="text-sm text-slate-500">${ed.org}</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">${ed.details}</p>
+      `;
+            eduWrap.appendChild(card);
+        });
+
+        // Theme toggle
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.getElementById('themeIcon').textContent = '☀️';
+        }
+        document.getElementById('themeBtn').addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const dark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+            document.getElementById('themeIcon').textContent = dark ? '☀️' : '🌙';
+        });
+    </script>
+
+    <!-- script for typing animation -->
+
+    <script>
+        const words = ["Full Stack Web Developer", "Teacher"];
+        let i = 0, j = 0, currentWord = "", isDeleting = false;
+
+        function type() {
+            currentWord = words[i];
+            let display = currentWord.substring(0, j);
+            document.getElementById("typing").textContent = display;
+
+            if (!isDeleting && j < currentWord.length) {
+                j++;
+                setTimeout(type, 150);
+            } else if (isDeleting && j > 0) {
+                j--;
+                setTimeout(type, 100);
+            } else {
+                isDeleting = !isDeleting;
+                if (!isDeleting) i = (i + 1) % words.length;
+                setTimeout(type, 1000);
+            }
+        }
+
+        type();
+    </script>
+
+</body>
+
+</html>
